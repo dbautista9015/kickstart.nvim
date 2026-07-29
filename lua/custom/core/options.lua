@@ -88,6 +88,3 @@ do
   -- See `:help 'confirm'`
   vim.o.confirm = true
 end
-
-
-
