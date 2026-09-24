@@ -185,6 +185,58 @@ do
   --  See `:help hlsearch`
   vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+  -- Move a half page down and center screen
+  vim.keymap.set(
+    'n',
+    '<C-d>',
+    '<C-d>zz',
+    { desc = "Move a half page down and center screen"}
+  )
+
+  -- Move a half page up and center screen
+  vim.keymap.set(
+    'n',
+    '<C-u>',
+    '<C-u>zz',
+    { desc = "Move a half page up and center screen"}
+  )
+
+  -- Move visually selected lines up or down as a unit
+  vim.keymap.set(
+    "v",
+    "J",
+    ":m '>+1<CR>gv=gv",
+    { desc = "Move visually selected lines down as a unit"}
+  )
+  vim.keymap.set(
+    "v",
+    "K",
+    ":m '<-2<CR>gv=gv",
+    { desc = "Move visually selected lines up as a unit"}
+  )
+
+  -- Able to paste and keep copied text in register.
+  vim.keymap.set(
+    "x",
+    "<leader>p",
+    [["_dP]],
+    { desc = "Able to paste and keep copied text in register."}
+  )
+
+  -- Search for term and center screen when going to the next or previous term
+  vim.keymap.set(
+    "n",
+    "n",
+    "nzzzv",
+    { desc = "Search for term and center screen when going to the next term"}
+  )
+  vim.keymap.set(
+    "n",
+    "N",
+    "Nzzzv",
+    { desc = "Search for term and center screen when going to the previous term"}
+  )
+
   -- Diagnostic Config & Keymaps
   --  See `:help vim.diagnostic.Opts`
   vim.diagnostic.config {
