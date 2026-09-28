@@ -11,7 +11,7 @@ vim.keymap.set(
   'n',
   '<leader>pv',
   '<Cmd>Neotree reveal<CR>',
-  { desc = 'NeoTree reveal', silent = true }
+  { desc = 'Open Neotree', silent = true }
 )
 
 require('neo-tree').setup {
